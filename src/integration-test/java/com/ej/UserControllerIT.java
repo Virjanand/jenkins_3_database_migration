@@ -50,12 +50,11 @@ public class UserControllerIT {
     }
 
     @Test
-    public void getUser() throws Exception {
+    public void getGetUser() throws Exception {
         // Add user
         String addUserUrl = base.toString() + "/user/new";
         User user = new User();
         user.setName("Louis");
-        user.setEmail("louis@gmail.com");
         ResponseEntity<User> responseEntity = template.postForEntity(addUserUrl, user, User.class);
         user = responseEntity.getBody();
         //Get user
@@ -63,6 +62,5 @@ public class UserControllerIT {
         responseEntity = template.getForEntity(url, User.class);
         User getUser = responseEntity.getBody();
         assertThat(getUser.getName(), equalTo("Louis"));
-        assertThat(getUser.getEmail(), notNullValue());
     }
 }

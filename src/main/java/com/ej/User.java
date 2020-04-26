@@ -12,7 +12,6 @@ public class User {
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Long id;
   private String name;
-  private String email;
 
   public User(){
 
@@ -36,14 +35,6 @@ public class User {
 
   public String getName() {
     return this.name;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getEmail() {
-    return this.email;
   }
 
 }

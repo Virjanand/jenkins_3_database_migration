@@ -4,7 +4,7 @@ pipeline {
         stage ('Checkout') {
             agent { docker 'gradle:4.5-jdk8-alpine' }
             steps {
-                git 'https://github.com/effectivejenkins/jenkins_3_database_migration.git'
+                git 'https://github.com/Virjanand/jenkins_3_database_migration.git'
             }
         }
         stage('Build') {

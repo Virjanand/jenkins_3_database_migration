@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'linux' }
+    agent { label 'slave01' }
     stages {
         stage ('Checkout') {
             agent { docker 'gradle:4.5-jdk8-alpine' }
